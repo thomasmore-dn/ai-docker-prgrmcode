@@ -8,6 +8,8 @@ pip list --format=freeze > requirements.txt
 
 - Install and run _[Docker Desktop](https://hub.docker.com/)_ on Windows before executing 'docker' commands
 
+## [How to run the project](#to-create-and-run-new-training-and-app-container-together)
+
 # Docker Containers:
 
 ## Training Container:
