@@ -1,0 +1,63 @@
+# .gitignore for Python projects with Docker
+
+# Python-related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.pyc
+
+# Virtual environment
+venv/
+env/
+
+# Docker-related
+.DS_Store
+.dockerignore
+.docker/
+# docker-compose.yml
+docker-compose-app.yml
+docker-compose.override.yml
+*.log
+
+# Editor/IDE related
+.vscode/
+.idea/
+*.iml
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# Compiled extensions
+*.so
+*.dylib
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Distribution
+dist/
+build/
+eggs/
+*.egg-info/
+
+# OS-related files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# IDE (e.g. PyCharm) files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

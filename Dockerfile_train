@@ -1,0 +1,37 @@
+# Use a base image with cuda from nvidia from docker hub and necessary dependencies for training
+FROM nvidia/cuda:12.1.0-cudnn8-runtime-ubuntu20.04
+
+# Install Python
+RUN apt-get update && apt-get install -y python3 python3-pip sudo
+
+# Add user called prgrmcode to container
+RUN useradd -m prgrmcode 
+
+# Change the owner of the home folder of the user to prgrmcode
+RUN chown -R prgrmcode:prgrmcode /home/prgrmcode/
+
+# Create a folder for model pth files
+RUN mkdir -p /home/prgrmcode/app/model
+
+# Make the dir writable by prgrmcode
+RUN chmod -R 777 /home/prgrmcode/app/model
+
+# Copy the entire train project directory into the container
+COPY --chown=prgrmcode train/ /home/prgrmcode/app/train/
+
+# Change user to prgrmcode
+USER prgrmcode
+
+# Install requirements  
+RUN pip3 install --upgrade setuptools wheel pip
+
+RUN pip3 install PyQt5==5.15.4
+
+RUN cd /home/prgrmcode/app/train/ && pip3 install -r requirements.txt
+
+# Set the working directory
+WORKDIR /home/prgrmcode/app/train
+
+
+# Command to run the training script
+CMD ["python3", "transfer_learning_pytorch.py"]

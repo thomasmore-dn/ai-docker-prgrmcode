@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+
+<body>
+    {% for image_data in images_data %}
+    <img src="data:image/png;base64,{{ image_data }}">
+    {% endfor %}
+</body>
+
+</html>
