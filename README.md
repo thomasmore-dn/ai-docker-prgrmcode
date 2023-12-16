@@ -60,6 +60,10 @@ Run everything easily from docker-compose.yml file with one command
 docker-compose up
 ```
 
+### When train and app container are up and running, you can navigate to:
+
+- **[localhost:5000](http://localhost:5000/)**
+
 ## Create and run a new training container:
 
 ```
