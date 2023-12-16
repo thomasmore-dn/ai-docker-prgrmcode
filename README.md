@@ -4,6 +4,10 @@ pip list --format=freeze > requirements.txt
 
 ---
 
+## Prerequisite:
+
+- Install and run _[Docker Desktop](https://hub.docker.com/)_ on Windows before executing 'docker' commands
+
 # Docker Containers:
 
 ## Training Container:
