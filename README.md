@@ -1,3 +1,5 @@
+# Assignment 1 – Docker
+
 ### to get the requirements.txt file in conda env:
 
 pip list --format=freeze > requirements.txt
@@ -101,3 +103,7 @@ docker system prune
 ```
 
 ---
+
+# [Assignment 2 – AWS](https://github.com/thomasmore-dn/ai-docker-prgrmcode/tree/Assignment2%E2%80%93AWS)
+
+Refer to [second branch](https://github.com/thomasmore-dn/ai-docker-prgrmcode/tree/Assignment2%E2%80%93AWS)
